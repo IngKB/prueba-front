@@ -2,7 +2,7 @@
   <div class="post-container">
     <div class="flex justify-between mb-2">
       <h1 class="text-white text-3xl">Noticias</h1>
-      <app-modal-post-form></app-modal-post-form>
+      <app-modal-post-form (newItemEvent)="updateView()"></app-modal-post-form>
     </div>
     <div class="flex flex-row flex-wrap">
       <ng-template postHost></ng-template>
