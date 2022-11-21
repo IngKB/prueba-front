@@ -1,0 +1,20 @@
+<form *ngIf="ogFormGroup" [formGroup]="ogFormGroup">
+  <h5 class="font-semibold">Tags:</h5>
+  <div class="flex flex-row">
+    <div class="flex flex-col border-r-2 pl-2 pr-4 w-1/2">
+      <div>
+        <label for="tag">Tag</label>
+        <input #tag formControlName="tag"
+          class="mb-2 bg-black-300 border border-black-400 text-white text-sm font-medium rounded-lg focus:ring-primary-300 focus:border-primary-300 block w-full p-2" />
+      </div>
+      <button (click)="addTag(tag.value)"
+        class="text-white bg-primary-300 hover:bg-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Agregar</button>
+    </div>
+    <ul class="overflow-y-auto h-32 p-2 flex flex-row flex-wrap w-1/2">
+      <li *ngFor="let tag of getTags()" class="bg-black-500 px-2 py-1  text-xs rounded-sm m-1 w-fit h-fit text-gray-200">
+        {{ tag }}
+      </li>
+    </ul>
+  </div>
+
+</form>

@@ -1,0 +1,12 @@
+<div class="bg-black-300 max-w-sm rounded-md p-4 m-2 shadow-primary-100 shadow-lg">
+    <h3 class="text-lg font-bold capitalize text-white mb-2">{{this.post?.title}}</h3>
+    <div class="mb-1 flex flex-row overflow-x-scroll">
+        <img *ngFor="let img of post?.images" src="{{img.image}}" class="max-w-xs rounded-lg mr-2">
+    </div>
+    <ul class="mb-2 flex flex-row overflow-x-scroll">
+        <li *ngFor="let tag of post?.tags" class="bg-black-400 px-2 py-1  text-xs rounded-sm m-1 w-fit text-gray-300">
+            {{tag}}
+        </li>
+    </ul>
+    <p class="text-gray-300 text-sm"> {{this.post?.text}}</p>
+</div>
